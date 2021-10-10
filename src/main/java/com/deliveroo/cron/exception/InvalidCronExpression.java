@@ -1,6 +1,5 @@
 package com.deliveroo.cron.exception;
 
-import com.deliveroo.cron.Main;
 import com.deliveroo.cron.model.TimeUnit;
 
 public class InvalidCronExpression extends RuntimeException {

@@ -43,7 +43,7 @@ public class NthIntervalParserTest {
 
     @ParameterizedTest
     @MethodSource("exceptionDataForParser")
-    void testIfNthIntervalParserIsWorkingAsExpected(TimeUnit timeUnit, String cronExpression) {
+    void testIfNthIntervalParserThrowsExceptionForInvalidInput(TimeUnit timeUnit, String cronExpression) {
         Assertions.assertThrows(InvalidCronExpression.class, () -> {
             parser.getTimings(timeUnit, cronExpression);
         });

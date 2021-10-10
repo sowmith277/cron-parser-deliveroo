@@ -46,7 +46,7 @@ public class FixedTimingsParserTest {
 
     @ParameterizedTest
     @MethodSource("exceptionDataForParser")
-    void testIfBoundIntervalsParserIsWorkingAsExpected(TimeUnit timeUnit, String cronExpression) {
+    void testIfFixedTimingsParserThrowsExceptionForInvalidInput(TimeUnit timeUnit, String cronExpression) {
         Assertions.assertThrows(InvalidCronExpression.class, () -> {
             parser.getTimings(timeUnit, cronExpression);
         });

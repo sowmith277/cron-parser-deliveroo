@@ -28,7 +28,7 @@ public class StarParserTest {
 
     @ParameterizedTest
     @MethodSource("dataForParser")
-    void testIfStarParserIsWorkingAsExpected(TimeUnit timeUnit, String cronExpression, List<Integer> expectedList) {
+    void testIfStarParserThrowsExceptionForInvalidInput(TimeUnit timeUnit, String cronExpression, List<Integer> expectedList) {
         List<Integer> actualList = parser.getTimings(timeUnit, cronExpression);
         Assertions.assertTrue(actualList.equals(expectedList));
     }

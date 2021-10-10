@@ -45,7 +45,7 @@ public class NumberParserTest {
 
     @ParameterizedTest
     @MethodSource("exceptionDataForParser")
-    void testIfNumberParserIsWorkingAsExpected(TimeUnit timeUnit, String cronExpression) {
+    void testIfNumberParserThrowsExceptionForInvalidInput(TimeUnit timeUnit, String cronExpression) {
         Assertions.assertThrows(InvalidCronExpression.class, () -> {
             parser.getTimings(timeUnit, cronExpression);
         });
